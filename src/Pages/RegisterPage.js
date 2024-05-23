@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Navigate } from "react-router-dom";
 
 export const RegisterPage = () => {
   const [username, setUsername] = useState("");
@@ -36,7 +37,7 @@ export const RegisterPage = () => {
     );
     if (response.status === 200) {
       alert("Registration successful");
-      window.location.href = "/login";
+      <Navigate to="/login" />;
     } else {
       alert("Registration failed");
     }
