@@ -62,7 +62,7 @@ export const HomePage = () => {
         }}
       >
         <p>
-          <b>**Note:-</b> To test out the app use the following credentials**
+          <b>**Note:-</b> To test out the app use the following credentials or register yourself as a new user**
         </p>
         <br />
         <p>Username:{"  test"}</p>
