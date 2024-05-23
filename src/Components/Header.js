@@ -6,7 +6,7 @@ export const Header = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:4000/profile", {
+    fetch("https://teacherportal-backend-r7my.onrender.com/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -16,10 +16,13 @@ export const Header = () => {
   }, []);
 
   async function logout() {
-    const response = await fetch("http://localhost:4000/logout", {
-      credentials: "include",
-      method: "POST",
-    });
+    const response = await fetch(
+      "https://teacherportal-backend-r7my.onrender.com/logout",
+      {
+        credentials: "include",
+        method: "POST",
+      }
+    );
     if (response.ok) {
       setUserInfo(null);
     }

@@ -5,7 +5,7 @@ export default function DeleteStudent() {
   const { id } = useParams();
 
   const deleteStudent = async () => {
-    fetch(`http://localhost:4000/students/${id}`, {
+    fetch(`https://teacherportal-backend-r7my.onrender.com/students/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

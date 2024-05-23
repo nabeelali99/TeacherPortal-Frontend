@@ -9,7 +9,7 @@ export default function UpdateStudent() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/students/${id}`, {
+    fetch(`https://teacherportal-backend-r7my.onrender.com/students/${id}`, {
       method: "GET",
       credentials: "include",
     })
@@ -22,7 +22,7 @@ export default function UpdateStudent() {
   }, []);
 
   const updateStudent = () => {
-    fetch(`http://localhost:4000/students/${id}`, {
+    fetch(`https://teacherportal-backend-r7my.onrender.com/students/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

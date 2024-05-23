@@ -27,7 +27,7 @@ export const TeacherPortalPage = () => {
   const handleClose = () => setOpen(false);
 
   useEffect(() => {
-    fetch("http://localhost:4000/students", {
+    fetch("https://teacherportal-backend-r7my.onrender.com/students", {
       credentials: "include",
     }).then((response) => {
       response.json().then((response) => {
@@ -44,7 +44,7 @@ export const TeacherPortalPage = () => {
     setMarks("");
     const data = { name, subject, marks };
     try {
-      fetch("http://localhost:4000/add", {
+      fetch("https://teacherportal-backend-r7my.onrender.com/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
